@@ -45,6 +45,8 @@ def test_get_student_with_more_classes():
     )
 
     # TODO: write assertions
+    std_w_more_classes = get_student_with_more_classes(charles, ada)
+    assert ada == std_w_more_classes
 
 
 # TODO: Write additional tests to reach 100% test coverage
