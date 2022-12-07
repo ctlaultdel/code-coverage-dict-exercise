@@ -3,6 +3,18 @@ from student.student import (
     get_student_with_more_classes
 )
 
+def test_create_student_with_no_courses_returns_empty_string():
+    name = "Ada Lovelace"
+    level = "sophomore"
+    courses = []
+
+    ada = create_student(name, level, courses)
+
+    assert ada["name"] == name
+    assert ada["level"] == level
+    assert ada["courses"] == courses
+
+
 def test_init():
     name = "Ada Lovelace"
     level = "sophomore"
