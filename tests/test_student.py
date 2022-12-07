@@ -59,6 +59,19 @@ def test_get_student_with_more_classes():
     # TODO: write assertions
     std_w_more_classes = get_student_with_more_classes(charles, ada)
     assert ada == std_w_more_classes
+    assert charles != std_w_more_classes
 
 
 # TODO: Write additional tests to reach 100% test coverage
+def test_get_student_with_more_classes_flipped():
+    charles = create_student("Charles Babbage", "senior", ["mechanical engineering"])
+    ada = create_student(
+        "Ada Lovelace",
+        "sophomore",
+        ["mathematics", "physics"]
+    )
+
+    # TODO: write assertions
+    std_w_more_classes = get_student_with_more_classes(ada, charles)
+    assert ada == std_w_more_classes
+    assert charles != std_w_more_classes
